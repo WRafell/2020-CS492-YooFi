@@ -19,7 +19,7 @@ block settings
       h3.sensitivityInfo
         | Sensitivity (?):
         span#sensitivityInfo.sensitivityInfotext
-          | Sensitivity means blah blah
+          | How different your pose should be from the reference image to be considered correct?
       span STRICT(10)
       input#sensitivityRange.slider(type='range' min='10' max='50' value='30' step='10')
       span FLEXIBLE(50)
@@ -29,9 +29,9 @@ block settings
       //- hr
     .slidecontainer
       h3.timesInfo
-        | Times (?):
+        | Sets (?):
         span#timesInfo.timesInfotext
-          | Times refers to...
+          | How many sets would you like to practice this pose?
       span MIN(1)
       input#timesRange.slider(type='range' min='1' max='10' value='4' step='1')
       span MAX(10)
@@ -43,7 +43,7 @@ block settings
       h3.secondsInfo
         | Seconds (?):
         span#secondsInfo.secondsInfotext
-          | Seconds refers to...
+          | For how long (in seconds) would you like to hold this pose?
       span MIN(1)
       input#secRange.slider(type='range' min='1' max='60' value='10' step='1')
       span MAX(60)
