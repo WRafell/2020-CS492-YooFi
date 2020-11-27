@@ -1,33 +1,28 @@
 # 2020-CS492-YooFi
 We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Juho Kim
+
 ### Background & Problem
 
 **Background**
-
-- COVID19 로 인해 집에서 보내는 시간이 많아짐,  GYM 이 문을 닫음,
-- 사람과 대면을 하지않고 혼자 집에서 할 수 있는 home training 에 대한 관심 증가.
-- 그 중 요가는 특별한 기구가 없어도 매트 한장의 공간만있으면 누구나 할 수 있기 때문에 홈트레이닝 운동으로 사랑받는다. .
+- Due to COVID19, more time spent at home, GYM was closed, and meetings were banned.
+- There is an increasing interest in home training that can be done at home alone without having to face-to-face with people.
+- Among them, yoga is loved as a home training exercise because anyone can do it without any special equipment as long as there is a space on a mat. .
 
 **Previous Works** 
-
-- phisical&psychological well-being 는 사람의 삶에 있어서 원래 중요했기 때문에 HCI 필드에서 이미 Health care, excercise, 에 관련 연구가 많이 진행되었다.
-- 기존연구들은 Deep learning 기술을 이용하여 센서 데이터나 computer vision 기술을 기반으로 모델의 estimation accuracy 를 높이는 데에 초점을 맞추어 왔다.
-- 높은 정확도를 위해 sophisticated model이나 특수한 장치 (sensors, kinethic- depth camera)들은 큰 컴퓨팅 자원가 특수한 디바이스를 자원으로 필요로 하기 때문에 실생활에서는 적용하기 힘들다.
+    Since phisical&psychological well-being was originally important in human life, many studies related to health care have already been conducted in the HCI field.
+    Existing studies have focused on increasing the estimation accuracy of models based on sensor data or computer vision technology using deep learning technology.
+    Sophisticated models and special devices (sensors, kinethic-depth cameras) used for high accuracy are difficult to apply in real life because large computing resources require special devices as resources.
 
 **Problem** 
 
-- However, 실제 사용자들은 사용할 수 있는 비용이 한정되어 있다.  한정된 장비와  완벽하지 않은 정확도를 가지고 충분한 만족도를 주기 위해서는 Human AI interaction에 대한 고려가 반드시 필요한데, 이에 대한 연구는 적게 이루어져 왔다 .
+- However, actual users have a limited amount of money they can use. In order to provide sufficient satisfaction with limited equipment and incomplete accuracy, human AI interaction must be considered, but few studies have been conducted on this. .
 
 ### Aim & method
 
 - An aim of our system, which we used pose estimation API based on Computer Vision, is to engage the satisfaction of the user by  focusing on the human-AI interaction that allows the users to experience the bi-directional interaction rather than one-directional lecture from the system.
-- 기존 one-directional interaction에서 벗어나서 bi-directional interaction을 가능하게 하는 것.
+- Ultimately, it breaks awy from the existing one-directional interaction and enabels bi-directional interaction. 
 
-    Ultimately, it breaks awy from the existing one-directional interaction and enabels bi-directional interaction. 
-
-- Futhermore, 이를 통해 오프라인에서 실제 instructor에게 수업을 받는 것에 가까워진 쌍방향 수업을 혼자, 원하는 공간에서 가능하게 한다.
-
-    Through this advanced form of interaction, futheromre, it is possible for the users to take interactive lessons closer to taking lessons from an actual instructor offline in the space they want by themselves.
+- Through this advanced form of interaction, futheromre, it is possible for the users to take interactive lessons closer to taking lessons from an actual instructor offline in the space they want by themselves.
 
 ### Methodologies
 
