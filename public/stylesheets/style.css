@@ -1,0 +1,91 @@
+body {
+	width: 1280px;
+	margin: auto;
+	background: black;
+	color: white;
+}
+
+.app {
+	/*background: #4ca8dc;*/
+	background: black;
+	border-style: solid;
+	border-color: white;
+	width: 1280px;
+	margin: 2% auto;
+}
+
+.app p {
+	color: white;
+	margin: 0 2%;
+}
+
+.app h1, h2, h3 {
+	color: white;
+	margin: 2%;
+}
+
+.app a {
+	color: white;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#hint {
+	color: white;
+	text-align: center;
+}
+
+.row {
+	display: flex;
+}
+
+.column {
+	width: 580px;
+	flex: 50%;
+	padding: 2px;	
+}
+
+#reference {
+	width: 580px;
+	margin: 2%;
+	background: white; 
+
+}
+
+#webcam {
+	width: 580px;
+	margin: 2%;
+	background: white;
+
+}
+
+#timer {
+	color: white;
+	text-align: center;
+	color: #f44336;
+}
+
+#img_id {
+	display: none;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.gal_column {
+  float: left;
+  width: 33%;
+  padding: 1px;
+}
+
+/* Clear floats after image containers */
+.gal_row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#gallery {
+   width: 100%;
+   height: 300px;
+   transform: scale(-1, 1);
+}
+

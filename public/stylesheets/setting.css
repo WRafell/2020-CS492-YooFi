@@ -1,0 +1,290 @@
+#settings {
+  display: none;
+}
+
+#settings span {
+  font-size: 14px;
+  margin: 1%;
+}
+
+#settingInformation {
+  color: red;
+  margin: 0%;
+}
+
+#modifyButton {
+  margin: 0 2% 2% 2%;
+  background-color: #555555; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#defaultButton {
+  display: none;
+  margin: 0 2% 2% 2%;
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#resetCounters {
+  margin: 0 2% 2% 2%;
+  background-color: #f44336; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.slidecontainer {
+  width: auto;
+  margin: 2%;
+  text-align: center;
+}
+
+.slider {
+
+  text-align: center;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  width: 60%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  border-radius: 100%;
+  appearance: none;
+  width: 25px;
+  height: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.setValue {
+   color: red;
+    font-weight : bold;
+
+}
+
+
+
+
+/* settingInformation container */
+.settingInformation {
+  position: relative;
+  display: inline;
+  color: red;
+  cursor: pointer;
+}
+
+p.settingInformation {
+  color: red;
+}
+
+/* The actual settingInformation (appears on top) */
+.settingInformation .settingInformationtext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* settingInformation arrow */
+.settingInformation .settingInformationtext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the settingInformation container (hide and show the settingInformation) */
+.settingInformation:hover .settingInformationtext {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* sensitivityInfo container */
+.sensitivityInfo {
+  position: relative;
+  display: inline;
+  color: red;
+  cursor: pointer;
+}
+
+/* The actual sensitivityInfo (appears on top) */
+.sensitivityInfo .sensitivityInfotext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* sensitivityInfo arrow */
+.sensitivityInfo .sensitivityInfotext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the sensitivityInfo container (hide and show the sensitivityInfo) */
+.sensitivityInfo:hover .sensitivityInfotext {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+/* timesInfo container */
+.timesInfo {
+  position: relative;
+  display: inline;
+  color: red;
+  cursor: pointer;
+}
+
+/* The actual timesInfo (appears on top) */
+.timesInfo .timesInfotext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* timesInfo arrow */
+.timesInfo .timesInfotext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the timesInfo container (hide and show the timesInfo) */
+.timesInfo:hover .timesInfotext {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+/* secondsInfo container */
+.secondsInfo {
+  position: relative;
+  display: inline;
+  color: red;
+  cursor: pointer;
+}
+
+/* The actual secondsInfo (appears on top) */
+.secondsInfo .secondsInfotext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* secondsInfo arrow */
+.secondsInfo .secondsInfotext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the secondsInfo container (hide and show the secondsInfo) */
+.secondsInfo:hover .secondsInfotext {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+
+
+/* Add animation (fade in the settingInformation) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

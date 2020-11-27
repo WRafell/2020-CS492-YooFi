@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Upload new pose
+  br
+  form(action='/add_process/upload' method='post' enctype="multipart/form-data")
+    input(type='file' name='userfile')
+    input(type='submit')
+
+  a(href="../tag")
+    img(src=img_file style="width:300px; display:block; margin-top:10px;").

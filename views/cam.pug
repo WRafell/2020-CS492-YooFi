@@ -1,0 +1,15 @@
+extends setting
+block display
+	.display
+		h2#hint
+			| Loading skeleton...
+		h2#timer Hold the pose to start...
+		#prototype.row
+			#reference.column
+			#webcam.column
+		br
+		h3
+			| Red lines indicate which body part you should correct ~
+
+	button#img_id(value = img_file)
+	script(src=js_file)

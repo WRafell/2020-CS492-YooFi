@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1(style="text-align: center;") &#129496; &#129496; You Only Yoga Once! &#129496; &#129496;
+  h3(style="text-align: center;") Welcome to #{title}
+
+  h2 Basic Poses
+    //- a(href="https://www.self.com/gallery/must-know-yoga-poses-for-beginners") By Katie Thoompson 
+
+  .gal_row
+  .gal_column
+    a(href='tag/mountain_down')
+      img#gallery(src='/images/mountain_pose_down.jpg' alt='Mountain Pose Down')
+  .gal_column
+    a(href="tag/mountain")
+      img#gallery(src='/images/mountain_pose.jpg' alt='Mountain Pose')
+  .gal_column
+    a(href='tag/tree')
+      img#gallery(src='/images/tree_pose.jpg' alt='Tree Pose')
+  .gal_column
+    a(href='tag/triangle')
+      img#gallery(src='/images/triangle_pose.jpg' alt='Triangle Pose')
+  .gal_column
+    a(href='tag/warrior')
+      img#gallery(src='/images/warrior_pose.jpg' alt='Warrior Pose')
