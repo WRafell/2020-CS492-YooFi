@@ -27,9 +27,15 @@ We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Ju
 ### Methodologies
 
 We designed a system which serve 3 main functions
+
+
 (1) Visual feedback using skeleton from pose estimation
+
+
 (2) Model usage feedback
 - In real world, user sometimes did not know what and how to feed the model for an input so we give adequate guidelines when they made unadequate input that the user can chagne their usage pattern.
+
+
 (3) Parameter Modification
 - The users are be served the setting functions, including times and secs for the training, that help the users can modify the model fit to their circumstances. 
 - Even if the accuarcay is low, the user can feel comfortable by changing the setting of sensitivity to flexible. 
