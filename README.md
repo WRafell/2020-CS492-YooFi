@@ -9,9 +9,9 @@ We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Ju
 - Among them, yoga is loved as a home training exercise because anyone can do it without any special equipment as long as there is a space on a mat. .
 
 **Previous Works** 
-    Since phisical&psychological well-being was originally important in human life, many studies related to health care have already been conducted in the HCI field.
-    Existing studies have focused on increasing the estimation accuracy of models based on sensor data or computer vision technology using deep learning technology.
-    Sophisticated models and special devices (sensors, kinethic-depth cameras) used for high accuracy are difficult to apply in real life because large computing resources require special devices as resources.
+- Since phisical&psychological well-being was originally important in human life, many studies related to health care have already been conducted in the HCI field.
+- Existing studies have focused on increasing the estimation accuracy of models based on sensor data or computer vision technology using deep learning technology.
+- Sophisticated models and special devices (sensors, kinethic-depth cameras) used for high accuracy are difficult to apply in real life because large computing resources require special devices as resources.
 
 **Problem** 
 
@@ -26,18 +26,16 @@ We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Ju
 
 ### Methodologies
 
-- We designed a system which serve 3 main functions
+We designed a system which serve 3 main functions
 
     (1) Visual feedback using skeleton from pose estimation
 
     (2) Model usage feedback
-
-    In real world, user sometimes did not know what and how to feed the model for an input so we give adequate guidelines when they made unadequate input that the user can chagne their usage pattern.
+- In real world, user sometimes did not know what and how to feed the model for an input so we give adequate guidelines when they made unadequate input that the user can chagne their usage pattern.
 
     (3) Parameter Modification
+- The users are be served the setting functions, including times and secs for the training, that help the users can modify the model fit to their circumstances. 
+- Even if the accuarcay is low, the user can feel comfortable by changing the setting of sensitivity to flexible. 
 
-    The users are be served the setting functions, including times and secs for the training, that help the users can modify the model fit to their circumstances. 
-    Even if the accuarcay is low, the user can feel comfortable by changing the setting of sensitivity to flexible. 
-
-- Results and Implecation
-- Discussion and Conclusions
+###  Results and Implecation
+### Discussion and Conclusions
