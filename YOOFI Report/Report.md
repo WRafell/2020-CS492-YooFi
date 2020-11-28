@@ -83,25 +83,3 @@ Our system will end when the user must hold the pose until time's up.
 
         - **[p5.js](https://p5js.org/):** p5.js is a JavaScript library that has a full set of drawing functionality. We use *p5js* to draw the skeleton of the user and the reference's image that PoseNet detect.
     2. Our webpage was built on [PUG](https://pugjs.org/api/getting-started.html), a template engine implemented with JavaScript for Node.js and browsers.
-
-## 4. Individual Reflections
-
-- **20205440**
-
-    For the Yoyo application, I worked mostly on the machine learning model implementation (with the *ml5 API)* and its integration with the system, as well as adding interpretability by drawing the skeletons (with the *p5js* library) based on the model's output. I also contributed to the design of the webpage app and the integration of the front-end with the back-end.
-
-    Regarding the useful skill I learned through this project, I'd say that because this has been my first experience building a system specifically focused on Human-AI interaction, I could improve my awareness of how machine learning models should be developed with a user-center mindset rather than focusing on improving any utility metric, and how the approach we take to build these AI-infused systems can change drastically the perception that the user has on those systems regardless the AI model itself. For instance, I witnessed how adding some fun and interactive features to our application could deviate the attention of the user from the pose estimator (which accuracy was not that high) to the overall experience. Moreover, in a technical manner, understanding how web-engine interpreter works was a very useful skill I learned.
-
-- **20195368**
-
-    Although this project is not my first time developing a website, it is my first time applying AI running on the website. That is the most challenging point. In this project, I worked on both the home page and the main page. My task is working on the front-end part of the home page; the back-end part of the main page: finding the skeleton for the instructor's image (model's API), making an algorithm to match the skeleton, and connecting some parts form the back-end to the front-end. Since I haven't developed the website for a long time, I took some time to study JavaScript again. And, this time, we decided to use PUG, which is new to me, for the front-end so I have learned new knowledge. From this project, I improved my programming skill a lot.
-
-    One important thing that I reflected on is the technology grows so fast these days. Compare to my experience in developing a website for the last five or six years, everything has been changed; even PUG, which we used, was changed its name from Jade, which I knew this name five years ago. And, PUG is old. Many people use React or Angular. I felt I am naïve and I need to keep my knowledge and skills current.
-
-- **20194526**
-
-    My part is making a Web application (back-end). I set up a Node (Express, written in JS run in Node.js runtime ) development environment and creating a skeleton website. I worked on combining the deep learning code and the website.
-
-    I had studied Nodejs before, and I really wanted to apply it to this project. In addition, I chose this because it is an advantage that I can easily and quickly create a simple web page. The difficulty was that a Pug, which is a node express template engine, has sensitive grammar. The part that took the most time to solve the problem is to get the value from the view.
-
-    What I learned in this project is a systemic understanding of the website. Except for the database, since we have not yet set a database,  I can use the handler function and module-based routing controllers and I can work with forms using pug as a view. I have created a website with a bulletin board based on the MVC pattern using Java. The name is different, but looking at the structure, I realized that JAVA's jsp is a VIEW that functions like a node's pug, and the connected routers are controllers. In addition, I've been thinking and searching a lot about how to increase usability, using existing API. We spent a lot of time discussing how to provide human-AI interaction, which was well worth it.
