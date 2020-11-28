@@ -8,3 +8,5 @@ We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Ju
 - An aim of our system, which we used pose estimation API based on Computer Vision, is to engage the satisfaction of the user by focusing on the human-AI interaction that allows the users to experience the bi-directional interaction rather than one-directional lecture from the system.
 ---
 The system contains three main functions: (1) matching the user's pose with the reference image, (2) giving the hints to the user to correct the pose, and (3) modifying the level of difficulty of the matching algorithm. 
+---
+Detail Description: [Report.md](/YOUFI Report/Report.md)
