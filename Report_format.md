@@ -44,23 +44,3 @@ Your report should include:
 One report per team. Your report should be submitted as a *zip* file. The instructions should be written in **[Markdown](https://daringfireball.net/projects/markdown/)** (please use the *.md* extension). Submit using KLMS.
 
 ---
-
-## 1. Project summary
-
-problem+solution+approach
-
-## 2. Instruction
-
-Screenshots + how to use it? s
-
-## 3. Prototype
-
-usability
-
-## 4. Imprementation Notes
-
-- Prototype URL
-- Repository URL
-- Libraries and frameworks
-
-## 5. Individual Reflections
