@@ -1,7 +1,10 @@
-/* ========================== 
+/* ========================================================  
 # CS492 | YooFi Team
 ## YOYO (You Only Yoga Once)
-=============================*/
+### URL: https://yoofi-yoyo.herokuapp.com/
+### Authors: Yoonhoi Jeon, Sakonporn Noree, Willmer Quinones
+### Github: https://github.com/WRafell/2020-CS492-YooFi
+=========================================================== */
 
 /* ===== GLOBAL VARIABLES ===== */ 
 /*
@@ -15,7 +18,12 @@ var user_poses = [];
 
 /*
 A skeleton refers to connected bodyparts (points), 
--- ref_information: information of the reference's pose including 
+-- ref_information: information of the reference's pose including bodyparts that composed the skeleton,
+                    angle and length of each part.
+-- user_information: information of the user's pose, similar to the previous one
+-- match_parts: the intersection of the ref_information and user_information on bodyparts
+-- diff_bodyparts: given an angle deviation, which bodyparts of the user are different from the reference
+-- all_instruction: based on the different bodyparts, the instructions for the user to fix her pose
 */
 let ref_information = [];
 let user_information = [];
@@ -24,6 +32,9 @@ let diff_bodyparts = [];
 let all_instructions = [];
 
 
+/*
+These are the variables for the timer and clock of the system
+*/
 let startTime;
 let settingTimes = document.getElementById("timesRange").value;
 let settingSeconds = document.getElementById("secRange").value;
@@ -34,9 +45,15 @@ let secCounter = 0;
 let lastSecond = -1;
 let startCounting = false;
 
+/*
+Fixing the screen size
+*/
 let screenWidth = 580;
 let screenHeight = Math.floor(screenWidth/1.333);
 
+/*
+The reference's image location
+*/
 var img_id = document.getElementById("img_id").value;
 
 //Translating the nomenclature of the bodyparts from ml5's PoseNet to user-friendly names
@@ -55,9 +72,21 @@ let bodyparts_dict = {
   "leftHip-rightHip": "hip",
 }
 
+/* ===== UTILITY FUNCTIONS ===== */ 
+
 function get_instruction(u, r, ua, ra, part) {
-  // Get instruction based on the angle of the body part for
-  // (u)ser and (r)eference
+  /* 
+  get_instruction(user_angle_coord, ref_angle_coord, user_angle, ref_angle, bodypart)
+  Get instruction based on the angle of the body part for (u)ser and (r)eference
+  > Inputs:
+    -- u (array): user's pose coordinates
+    -- r (array): reference's pose coordinates
+    -- ua (float): user bodypart's angle
+    -- ra (float): reference bodypart's angle
+    -- part (str): bodypart
+  > Returns:
+    -- instruction (str)
+  */
 
   let action;
 
@@ -95,7 +124,16 @@ function get_instruction(u, r, ua, ra, part) {
   return instruction
 }
 
+
 function angle_length(p1, p2) {
+  /*
+  Get the angle and length of a given skeleton's part
+  > Input:
+    -- p1 (dict): coordinates of a bodypart
+    -- p2 (dict): coordinates of a bodypart
+  > Returns:
+    -- [angle, length] (array)
+  */
   let x1 = Math.round(p1.x);
   let x2 = Math.round(p2.x);
   let y1 = Math.round(p1.y);
@@ -108,6 +146,16 @@ function angle_length(p1, p2) {
 }
 
 function get_pose_information(pose, info_array) {
+  /*
+  Given a pose dictionary, construct an array of each part of the skeleton,
+  its angle, length and coordinates
+  > Input:
+    -- pose (dict): the pose estimation from the ML model
+    -- info_array (array): global variable to be filled with the information
+  > Returns:
+    -- info_array (array)
+
+  */
   info_array = [];
   let skeletons = pose.skeleton;
   for(j=0; j < skeletons.length; j+=1){
@@ -142,6 +190,14 @@ function get_pose_information(pose, info_array) {
 }
 
 function matching(user_tp, ref_tp){
+  /*
+  Getting the common bodyparts detected for the user and the reference
+  > Input:
+    -- user_tp(array): user's pose information
+    -- ref_tp(array): reference's pose information
+  > Returns:
+    -- match_parts(array)
+  */
   match_parts = [];
 
   for(j=0; j<user_tp.length; j+=1){
@@ -178,6 +234,15 @@ function matching(user_tp, ref_tp){
 }
 
 function get_diff(p) {
+  /*
+  Getting different bodyparts coordinates based on a angle deviation
+  > Inputs:
+    -- p(array): skeletons' information (coordinates and angles)
+  > Returns:
+    -- [diff_bodyparts, all_instructions] (array)
+      -- diff_bodyparts(array): which bodyparts have different angles?
+      -- all_instructions(array): instructions on how to fix the pose
+  */
   let diff_bodyparts = [];
   let all_instructions = [];
   let angle_deviation = document.getElementById("sensitivityRange").value;
@@ -223,6 +288,9 @@ function get_diff(p) {
 }
 
 function resetVariables() {
+  /*
+  Reset global variables
+  */
   user_information = [];
   match_parts = [];
   diff_bodyparts = [];
@@ -231,12 +299,18 @@ function resetVariables() {
 }
 
 function stopWatch(){
+  /*
+  Start global clock
+  */
   let now = new Date().getTime();
   let timeDiff = now - startTime;
   return Math.floor((timeDiff) / 1000);
 }
 
 function settingsChanged() {
+  /*
+  (bool) Check if the user has changed the setting (on the setting HTML page)
+  */
   let times = document.getElementById("timesRange").value;
   let seconds = document.getElementById("secRange").value;
   let sensitivity = document.getElementById("sensitivityRange").value;
@@ -250,6 +324,9 @@ function settingsChanged() {
 }
 
 function resetCounters() {
+  /*
+  Reset global counters
+  */
   timeCounter = 0;
   secCounter = 0;
   lastSecond = 0;
@@ -257,6 +334,10 @@ function resetCounters() {
   document.getElementById('timer').innerHTML = 'Hold the pose to start...';
 }
 
+
+/* ===== MAIN P5js VIEWS ===== */ 
+
+// Reference's view
 var imgSide = function( sketch ) {
 
   // Image Variables
@@ -354,6 +435,7 @@ var imgSide = function( sketch ) {
   } 
 };
 
+// User's view
 var vidSide = function( sketch ) {
 
     let video;
