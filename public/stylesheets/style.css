@@ -6,6 +6,10 @@ body {
 	color: white;
 }
 
+p, h1, h2, h3 {
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+
 .app {
 	/*background: #4ca8dc;*/
 	background: black;
@@ -92,11 +96,8 @@ body {
    transform: scale(-1, 1);
 }
 
-/* .gallery {
-	z-index: 1;
-	top: 10px;
-} */
 
+/* Duplicated, to remove */
 #overlay {
 	position: fixed;
 	display: block;
@@ -110,7 +111,20 @@ body {
 	z-index: 2;
 }
 
-.instructions {
+#explanation_overlay {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 2;
+}
+
+.instructions, .explanation {
 	position: absolute;
 	background-color: black;
 	top: 50%;
@@ -129,7 +143,15 @@ body {
 	margin: 3% 5%;
 }
 
+.explanation h1, h2, h3 {
+	margin: 3% 5%;
+}
+
 .instructions p, ul {
+	margin: 3% 10%;
+}
+
+.explanation p, ul {
 	margin: 3% 10%;
 }
 
@@ -139,13 +161,6 @@ body {
 	text-decoration: none;
 }
 
-#toStart {
-	color: blanchedalmond;
-	font-size: x-large;
-	text-align: center;	
-	cursor: pointer;
-}
-
 #openInstruction {
 	color: gray;
 	text-align: center;
@@ -153,3 +168,17 @@ body {
 	font-size: 14px;
 }
 
+#openExplanation {
+	color: gray;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 2%;
+}
+
+#toStart, #toStartCam {
+	color: #f44336;
+	font-size: x-large;
+	text-align: center;	
+	cursor: pointer;
+}

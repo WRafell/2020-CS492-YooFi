@@ -1,4 +1,4 @@
-extends camlayout
+extends model_explanation
 
 block settings
   button#resetCounters(onclick='resetCounters()') Reset Timer
@@ -7,22 +7,14 @@ block settings
   #settings    
     p 
       | Drag the slider to display the current value. 
-      //- p.settingInformation
-      //-   | (What do these mean?)
-      //-   span#settingInfo.settingInformationtext
-      //-     | Sensitivity:
-      //-     br
-      //-     | Times: 
-      //-     br
-      //-     | Seconds: 
     .slidecontainer
       h3.sensitivityInfo
         | Sensitivity (?):
         span#sensitivityInfo.sensitivityInfotext
           | How different your pose should be from the reference image to be considered correct?
-      span STRICT(10)
+      span FLEXIBLE(10)
       input#sensitivityRange.slider(type='range' min='10' max='50' value='30' step='10')
-      span FLEXIBLE(50)
+      span STRICT(50)
       p.settingType
         | Value: 
         span#demo1.setValue

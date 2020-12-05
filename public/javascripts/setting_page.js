@@ -40,3 +40,12 @@ function setDefault(){
   secSlider.value = 10;
   secOutput.innerHTML = 10;
 }
+
+function closeExplanation(){
+  document.getElementById('explanation_overlay').style.display = "none";
+}
+
+function openExplanation(){
+  document.getElementById('explanation_overlay').style.display = "block";
+}
+
