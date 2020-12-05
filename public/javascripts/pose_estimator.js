@@ -245,7 +245,8 @@ function get_diff(p) {
   */
   let diff_bodyparts = [];
   let all_instructions = [];
-  let angle_deviation = document.getElementById("sensitivityRange").value;
+  let angle_deviation_value = document.getElementById("sensitivityRange").value;
+  let angle_deviation = 50 - 40*(angle_deviation_value)/100;
 
   for(i=0; i<p.length; i+=1){
 
@@ -313,7 +314,8 @@ function settingsChanged() {
   */
   let times = document.getElementById("timesRange").value;
   let seconds = document.getElementById("secRange").value;
-  let sensitivity = document.getElementById("sensitivityRange").value;
+  // let sensitivity_value = document.getElementById("sensitivityRange").value;
+  // let sensitivity = 50 - 40*(sensitivity_value)/100;
 
   if ((times === settingTimes) || (seconds === settingTimes)) {
     settingTimes = times;
@@ -554,7 +556,6 @@ var vidSide = function( sketch ) {
         // Loop through all the skeletons detected
         const user_pose = user_poses[0];
         const confidence = user_pose.pose.score;
-        console.log(confidence);
         const skeleton = user_pose.skeleton;
         if (confidence > 0.4){
           // For every skeleton, loop through all body connections

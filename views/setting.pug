@@ -12,9 +12,9 @@ block settings
         | Sensitivity (?):
         span#sensitivityInfo.sensitivityInfotext
           | How different your pose should be from the reference image to be considered correct?
-      span FLEXIBLE(10)
-      input#sensitivityRange.slider(type='range' min='10' max='50' value='30' step='10')
-      span STRICT(50)
+      span FLEXIBLE(0)
+      input#sensitivityRange.slider(type='range' min='0' max='100' value='50' step='10')
+      span STRICT(100)
       p.settingType
         | Value: 
         span#demo1.setValue

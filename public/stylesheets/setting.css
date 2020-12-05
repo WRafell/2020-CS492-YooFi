@@ -275,9 +275,6 @@ p.settingInformation {
   animation: fadeIn 1s
 }
 
-
-
-
 /* Add animation (fade in the settingInformation) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
