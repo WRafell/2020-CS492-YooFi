@@ -550,26 +550,31 @@ var vidSide = function( sketch ) {
 
     // A function to draw the skeletons
     sketch.drawSkeleton = function() {
-      // Loop through all the skeletons detected
-      for (let i = 0; i < user_poses.length; i += 1) {
-        const skeleton = user_poses[i].skeleton;
-        // For every skeleton, loop through all body connections
-        for (let j = 0; j < skeleton.length; j += 1) {
-          const partA = skeleton[j][0];
-          const partB = skeleton[j][1];
-          const partAB = partA.part + "-" + partB.part;
-          const partBA = partB.part + "-" + partA.part;
-          if (diff_bodyparts.includes(partAB) || diff_bodyparts.includes(partBA)){
-            sketch.stroke(255, 0, 0);
+      if (user_poses.length > 0){
+        // Loop through all the skeletons detected
+        const user_pose = user_poses[0];
+        const confidence = user_pose.pose.score;
+        console.log(confidence);
+        const skeleton = user_pose.skeleton;
+        if (confidence > 0.4){
+          // For every skeleton, loop through all body connections
+          for (let j = 0; j < skeleton.length; j += 1) {
+            const partA = skeleton[j][0];
+            const partB = skeleton[j][1];
+            const partAB = partA.part + "-" + partB.part;
+            const partBA = partB.part + "-" + partA.part;
+            if (diff_bodyparts.includes(partAB) || diff_bodyparts.includes(partBA)){
+              sketch.stroke(255, 0, 0);
+            }
+            else {
+              sketch.stroke(0, 255, 0);
+            }
+            sketch.strokeWeight(15);
+            sketch.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
           }
-          else {
-            sketch.stroke(0, 255, 0);
-          }
-          sketch.strokeWeight(15);
-          sketch.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
-        }
+        }   
       }
-    }
+    } 
 }
 
 // Starting reference's pose

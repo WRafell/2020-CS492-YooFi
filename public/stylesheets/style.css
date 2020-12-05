@@ -1,4 +1,5 @@
 body {
+	z-index: 0;
 	width: 1280px;
 	margin: auto;
 	background: black;
@@ -69,6 +70,8 @@ body {
 	display: none;
 }
 
+
+
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .gal_column {
   float: left;
@@ -87,5 +90,66 @@ body {
    width: 100%;
    height: 300px;
    transform: scale(-1, 1);
+}
+
+/* .gallery {
+	z-index: 1;
+	top: 10px;
+} */
+
+#overlay {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 2;
+}
+
+.instructions {
+	position: absolute;
+	background-color: black;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	margin: auto;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);	
+	border-style: solid;
+	border-color: white;
+	border-radius: 20px;
+}
+
+.instructions h1, h2, h3 {
+	margin: 3% 5%;
+}
+
+.instructions p, ul {
+	margin: 3% 10%;
+}
+
+.instructions a {
+	color: #f44336;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#toStart {
+	color: blanchedalmond;
+	font-size: x-large;
+	text-align: center;	
+	cursor: pointer;
+}
+
+#openInstruction {
+	color: gray;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
 }
 

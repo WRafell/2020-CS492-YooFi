@@ -1,0 +1,18 @@
+extends layout
+
+block instruction
+  div#overlay
+    div.instructions
+      h2 About this project
+      p
+        | YOYO, You Only Yoga Once, is a home training website for yoga beginners who want to practice their poses at home. 
+        a(href='https://github.com/WRafell/2020-CS492-YooFi' target="_blank") Check repository.
+      h2 Instructions
+      ul
+        li Please select the pose you want to practice from our gallery
+        li Try to mimic the reference&apos;s posture.
+        li Our system will tell you which part of your body you need to correct.
+        li If your posture is correct, green lines will be presented.
+        li You can modify the settings of our system by clicking &apos;Show Settings&apos;
+      p#toStart(onclick="closeInstruction()") Click here to start!
+  block content
