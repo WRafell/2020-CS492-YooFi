@@ -1,14 +1,26 @@
 # 2020-CS492-YooFi
 We are team YooFi for the 2020 Fall CS492 Human-AI Interaction@KAIST by prof. Juho Kim
----
-- Due to the pandemic, Yoga get loved as a home training exercise because anyone can do it without any special equipment as long as there is a space for a mat.
-- Existing related studies have focused on increasing the estimation accuracy of models based on sensor data or computer vision technology using deep learning technology.
-- Sophisticated models or special devices, which were used for high accuracy, are difficult to apply in real life because large computing resources require special devices as resources.
-- However, actual users have a limited amount of budget. In order to provide sufficient satisfaction with limited equipment and incomplete accuracy, human AI interaction must be considered.
-- An aim of our system, which we used pose estimation API based on Computer Vision, is to engage the satisfaction of the user by focusing on the human-AI interaction that allows the users to experience the bi-directional interaction rather than one-directional lecture from the system.
----
-The system contains three main functions: 
+Authors: YoonHoi Jeon, Sakonporn Noree, Willmer Quinones
 
-(1) matching the user's pose with the reference image, (2) giving the hints to the user to correct the pose, and (3) modifying the level of difficulty of the matching algorithm. 
 ---
-Detail Description: [Report.md](/YOUFI Report/Report.md)
+
+## Project summary
+
+Our system, YOYO, allows you to do yoga on your own, wherever you want, whenever you want, without having to go to the gym, and without expensive private tutors. All you need is a space for a yoga mat and a device with a camera (cell phone, laptop). Our system, using Deep learning for Computer vision, extracts the skeleton from the instructor and user's postures, compares them and displays them on the screen. In addition, the user can directly adjust the sensitivity of the model, and the system provides feedback to help users make better use of the system.
+
+## Imprementation Notes
+
+- Prototype URL :  [https://yoofi-yoyo.herokuapp.com/](https://yoofi-yoyo.herokuapp.com/)
+    - [ ]  You need to **allow to use the CAMERA**
+    - [ ]  Since our system is optimized for the web browser environment; NodeJS based Google's Chrome V8 js engine, it is recommended to connect to a **PC, chrome browser**.
+- Repository URL : [https://github.com/WRafell/2020-CS492-YooFi.git](https://github.com/WRafell/2020-CS492-YooFi.git)
+- Libraries and frameworks
+    1. The development of this project was mainly based on *ml5* and *p5js.*
+        - **[ml5's poseNet()](https://ml5js.org/reference/api-PoseNet/):** PoseNet is a machine learning model API that allows for Real-time Human Pose Estimation. In can be integrated to our app via JavaScript. For instances:
+
+            ```jsx
+            const poseNet = ml5.poseNet(video, modelLoaded);
+            ```
+
+        - **[p5.js](https://p5js.org/):** p5.js is a JavaScript library that has a full set of drawing functionality. We use *p5js* to draw the skeleton of the user and the reference's image that PoseNet detect.
+    2. Our webpage was built on [PUG](https://pugjs.org/api/getting-started.html), a template engine implemented with JavaScript for Node.js and browsers.# Report
