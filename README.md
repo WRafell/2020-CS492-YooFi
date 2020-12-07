@@ -24,4 +24,4 @@ Our system, YOYO, allows you to do yoga on your own, wherever you want, whenever
             ```
 
         - **[p5.js](https://p5js.org/):** p5.js is a JavaScript library that has a full set of drawing functionality. We use *p5js* to draw the skeleton of the user and the reference's image that PoseNet detect.
-    2. Our webpage was built on [PUG](https://pugjs.org/api/getting-started.html), a template engine implemented with JavaScript for Node.js and browsers.# Report
+    2. Our webpage was built on [PUG](https://pugjs.org/api/getting-started.html), a template engine implemented with JavaScript for Node.js and browsers.
